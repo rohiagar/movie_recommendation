@@ -22,3 +22,16 @@ print(df1.iloc[::5000000, :])
 #print('Dataset 2 shape: {}'.format(df2.shape))
 #print('Dataset 3 shape: {}'.format(df3.shape))
 #print('Dataset 4 shape: {}'.format(df4.shape))
+
+
+# After loading the data we merge all the four datasets:
+
+df = df1
+#df = df1.append(df2)
+#df = df.append(df3)
+#df = df.append(df4)
+
+df.index = np.arange(0,len(df))
+print('Full dataset shape: {}'.format(df.shape))
+print('-Dataset examples-')
+print(df.iloc[::5000000, :])
