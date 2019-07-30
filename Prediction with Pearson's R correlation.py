@@ -13,5 +13,11 @@ def recommend(movie_title, min_count):
     corr_target = corr_target.join(df_title).join(df_movie_summary)[['PearsonR', 'Name', 'count', 'mean']]
     print(corr_target[corr_target['count']>min_count][:10].to_string(index=False))
 
+# Now lets see give a recommendation and see what you would like to watch
 
+recommend("X2: X-Men United", 0)
+          
+# lets try another recommendation 
+          
+recommend("The Maltese Falcon", 0)          
 
